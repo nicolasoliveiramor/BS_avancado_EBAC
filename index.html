@@ -324,9 +324,13 @@
 
     <script src="./lib/bootstrap.bundle.min.js"></script>
     <script>
-        const mensagem = document.getElementById('mensagens-alerta')
-        const toast = new bootstrap.Toast(mensagem)
-        toast.show()
+        document.addEventListener('DOMContentLoaded', function() {
+            const mensagem = document.getElementById('mensagens-alerta')
+            const toast = new bootstrap.Toast(mensagem)
+            setTimeout(function(){
+                toast.show()
+            }, 3000)
+        })
     </script>
 </body>
 </html>
