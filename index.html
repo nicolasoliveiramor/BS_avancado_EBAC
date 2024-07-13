@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            margin-left: 1em;
+        }
+
+        .nav-link {
+            font-size: larger;
+        }
+        
+        .container > h2 {
+            color: white;
+            margin-left: 1em;
+            padding: 0;
+        }
+
+        .btn-warning {
+            margin-right: 2em;
+            visibility: visible;
+        }
+
+        #cadastro {
+            visibility: hidden;
+        }
+
+
+        /*-------------------------Estilizando Section---------------------------*/
+
+        .img {
+            margin: 2em 0;
+            height: 330px;
+        }
+
+        img {
+            height: 354px;
+        }
+
+        #economia, #guerra {
+            font-weight: 700;
+            width: 100%;
+        }
+
+        footer {
+            margin-top: 0em;
+            padding: 1em 0;
+            color: white;
+            font-weight: 600;
+            font-size: large;
+            text-align: center;
+        }
+
+        #cards {
+            margin-bottom: 4em;
+        }
+
+        /*-------------------------Mobile First---------------------------*/
+
+        @media screen and (max-width:767px) {
+            .img {
+                margin: 2em 0;
+                height: auto;
+            }
+
+            img {
+                height: 354px;
+            }
+
+            .container > h2 {
+                color: white;
+                margin-left: 0.5em;
+                padding: 0;
+            }
+
+            #carousel-control {
+                display: none;
+            }
+
+            #economia, #guerra {
+                font-weight: 700;
+                width: 100%;
+            }
+
+            .btn-warning {
+                display: none;
+            }
+
+            #cadastro {
+                visibility: visible;
+            }
+
+            #cards {
+                margin-bottom: 4em;
+            }
+
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            .img {
+                margin-top: 1em 0;
+                height: auto;
+            }
+            
+            img {
+                height: 354px;
+            }
+
+            .container > h2 {
+                color: white;
+                margin-left: 0.5em;
+                padding: 0;
+            }
+
+            #carousel-control {
+                display: none;
+            }
+
+            #economia, #guerra {
+                font-weight: 700;
+                width: 100%;
+            }
+
+            .btn-warning {
+                display: none;
+            }
+
+            #cadastro {
+                visibility: visible;
+            }
+
+            #cards {
+                margin-top: 0em;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <h2>Word News</h2>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#dropdown">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <nav class="collapse navbar-collapse" id="dropdown">
+                        <ul class="nav navbar-nav nav-pills">
+                            <li class="nav-item">
+                                <a href="#title" class="nav-link">Economia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#guerra" class="nav-link">Guerra</a>
+                            </li>
+                            <li id="cadastro" class="nav-item">
+                                <a href="#" class="nav-link">Cadastre-se</a>
+                            </li>
+                        </ul>
+                    </nav>
+                <button type="button" class="btn btn-warning">Cadastre-se</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div id="carousel-exemplo" class="carousel slider" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <button id="carousel-control" data-bs-target="#carousel-exemplo" class="carousel-control-next" data-bs-slide="next" type="button">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                    <div data-bs-interval="5000" class="carousel-item active">
+                        <div class="img">
+                            <img class="d-block w-100" src="./Imagens para o projeto/img_carrousel_1.jpg">
+                        </div>
+                    </div>
+                    <div data-bs-interval="5000" class="carousel-item">
+                        <div class="img">                            
+                            <img class="d-block w-100" src="./Imagens para o projeto/img_carousel_2.jpg">
+                        </div>
+                    </div>
+                    <button id="carousel-control" data-bs-target="#carousel-exemplo" class="carousel-control-prev" data-bs-slide="prev" type="button">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="row">
+                <h2 class="border-bottom border-dark border-3 border-primary pb-2" id="title">Economia</h2>
+                <div id="cards" class="col-sm-12 col-md-6 col-lg-4">
+                    <header class="card-header">
+                        <h4>O pingado ainda mais caro.</h4>
+                    </header>
+                    <article class="card h-100 d-flex flex-column">
+                        <img src="./Imagens para o projeto/pingado_cafe.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title fs-4 fs-md-5 fs-lg-6">Inflação é a maior causa.</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis similique, natus itaque labore recusandae ea perspiciatis odio sed?</p>
+                            <a href="#">Leia mais</a>
+                        </div>
+                        <footer class="card-footer">
+                            Postado em <time>12/07/2024 às 17:09</time>
+                        </footer>
+                    </article>
+                </div>
+                <div id="cards" class="col-sm-12 col-md-6 col-lg-4">
+                    <header class="card-header">
+                        <h4>Dolar hoje, cotação em R$5,45.</h4>
+                    </header>
+                    <article class="card h-100 d-flex flex-column">
+                        <img src="./Imagens para o projeto/R$.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title fs-4 fs-md-5 fs-lg-6">Taxa do FED é a maior causa.</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis similique, natus itaque labore recusandae ea perspiciatis odio sed?</p>
+                            <a href="#">Leia mais</a>
+                        </div>
+                        <footer class="card-footer">
+                            Postado em <time>12/07/2024 às 17:09</time>
+                        </footer>
+                    </article>
+                </div>
+                <div id="cards" class="col-sm-12 col-md-6 col-lg-4">
+                    <header class="card-header">
+                        <h4>Gasolina sofre aumento de 8%.</h4>
+                    </header>
+                    <article class="card h-100 d-flex flex-column">
+                        <img src="Imagens para o projeto/gasolina.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title fs-4 fs-md-5 fs-lg-6">Petrogás anunciou aumento.</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis similique, natus itaque labore recusandae ea perspiciatis odio sed?</p>
+                            <a href="#">Leia mais</a>
+                        </div>
+                        <footer class="card-footer">
+                            Postado em <time>12/07/2024 às 17:09</time>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <h2 class="border-bottom border-dark border-3 border-primary pb-2" id="guerra">Guerra</h2>
+                <div id="cards" class="col-sm-12 col-md-6 col-lg-4">
+                    <header class="card-header">
+                        <h4>China pode invadir taiwan.</h4>
+                    </header>
+                    <article class="card h-100 d-flex flex-column">
+                        <img src="./Imagens para o projeto/invasao_china.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title fs-4 fs-md-5 fs-lg-6">Movimentos militares preocupam.</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis similique, natus itaque labore recusandae ea perspiciatis odio sed?</p>
+                            <a href="#">Leia mais</a>
+                        </div>
+                        <footer class="card-footer">
+                            Postado em <time>12/07/2024 às 17:09</time>
+                        </footer>
+                    </article>
+                </div>
+                <div id="cards" class="col-sm-12 col-md-6 col-lg-4">
+                    <header class="card-header">
+                        <h4>Guerra na Ucrânia.</h4>
+                    </header>
+                    <article class="card h-100 d-flex flex-column">
+                        <img src="./Imagens para o projeto/ucrania.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title fs-4 fs-md-5 fs-lg-6">Guerra ultrapassa os 2 anos.</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis similique, natus itaque labore recusandae ea perspiciatis odio sed?</p>
+                            <a href="#">Leia mais</a>
+                        </div>
+                        <footer class="card-footer">
+                            Postado em <time>12/07/2024 às 17:09</time>
+                        </footer>
+                    </article>
+                </div>
+                <div id="cards" class="col-sm-12 col-md-6 col-lg-4">
+                    <header class="card-header">
+                        <h4>F-16 enviados para a Ucrânia.</h4>
+                    </header>
+                    <article class="card h-100 d-flex flex-column">
+                        <img src="./Imagens para o projeto/f-16.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title fs-4 fs-md-5 fs-lg-6">Caças podem ajudar na guerra.</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis similique, natus itaque labore recusandae ea perspiciatis odio sed?</p>
+                            <a href="#">Leia mais</a>
+                        </div>
+                        <footer class="card-footer">
+                            Postado em <time>12/07/2024 às 17:09</time>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-5">
+        <div data-bs-autohide="false" class="toast" id="mensagens-alerta">
+            <div class="toast-header bg-white">
+                <strong class="me-auto">Que tal receber nossas noticias?</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body bg-white">
+                <strong>Seu e-mail:</strong>
+                <input type="e-mail">
+                <button class="btn btn-success">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark">    
+        <div class="container">
+            &copy; Nicolas - EBAC - 2024
+        </div>
+    </footer>
+
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+    <script>
+        const mensagem = document.getElementById('mensagens-alerta')
+        const toast = new bootstrap.Toast(mensagem)
+        toast.show()
+    </script>
+</body>
+</html>
